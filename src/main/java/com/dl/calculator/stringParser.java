@@ -67,6 +67,8 @@ public class stringParser {
     public static Integer evaluate(String infix)
     {
         //Perform syntax checking
+        if (isOperator(infix.charAt(infix.length() - 1))) { return -1; }
+
         for (int i = 0; i < infix.length() - 1; i++) {
             char c = infix.charAt(i);
             char c1 = infix.charAt(i+1);
